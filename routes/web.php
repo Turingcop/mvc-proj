@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{DiceController, YatzyController, SessionController, ScoreController};
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/test', [DiceController::class, 'show']);
+Route::post('/test', [DiceController::class, 'show']);
+
+Route::prefix('yatzy')->group(function () {
+    Route::get('', [YatzyController::class, 'start']);
+    Route::post('', [YatzyController::class, 'play']);
+    Route::post('/putscore', [YatzyController::class, 'putscore']);
+    Route::post('/restart', [YatzyController::class, 'reset']);
+});
+
+Route::get('/score', [ScoreController::class, 'desc']);
+Route::get('/score/pointsasc', [ScoreController::class, 'asc']);
