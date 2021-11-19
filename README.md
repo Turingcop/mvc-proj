@@ -21,7 +21,9 @@ När en spelomgång är slut kontrolleras poängen mot databasen som lagrar de t
 
 ### Installation
 
-För att koden ska fungera som tänkt krävs vid kloning av repot att en lokal .env-fil placeras i rot-katalogen. I detta repo finns en .env.example att utgå ifrån för att få rätt struktur. Det som framförallt behöver anges är vilken typ av databas som ska användas under env-variabeln DB_CONNECTION, samt detaljerna, så som namn på databasen, användarnamn och lösenord till den. Makefile innehåller i övrigt kommandon som kan för att installera eventuella beroenden och dylikt, samt köra testsviten som valideras koden och kör testerna. Tester av metoder som jobbar mot databasen körs mot en sqlite-databas som är inkluderad i repot. Det finns också migrationer för att skapa de tabeller i den valda produktionsdatabasen som krävs för att applikationen ska fungera. Dessa kan köras från kommandoraden med "php artisan migrate".
+För att koden ska fungera som tänkt krävs vid kloning av repot att en lokal .env-fil placeras i rot-katalogen. I detta repo finns en .env.example att utgå ifrån för att få rätt struktur. Det som framförallt behöver anges är vilken typ av databas som ska användas under env-variabeln DB_CONNECTION, samt detaljerna, så som namn på databasen, användarnamn och lösenord till den. Makefile innehåller i övrigt kommandon som kan för att t ex köra testsviten som validerar koden och kör enhetstesterna. 
+
+Tester av metoder som jobbar mot databasen körs mot en sqlite-databas som är inkluderad i repot. Det finns också migrationer för att skapa de tabeller i den valda produktionsdatabasen som krävs för att applikationen ska fungera. Dessa kan köras från kommandoraden med "php artisan migrate".
 
 ### Statistik
 
