@@ -1,8 +1,6 @@
 <?php
 
-namespace Tests\Unit;
-
-use PHPUnit\Framework\TestCase;
+namespace PHPUnit\Framework;
 
 class BoardSumTest extends TestCase
 {

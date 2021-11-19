@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace PHPUnit\Framework\TestCase;
 
 use Tests\TestCase;
 use App\Models\Score;

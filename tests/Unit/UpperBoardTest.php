@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace PHPUnit\Framework\TestCase;
 
 use PHPUnit\Framework\TestCase;
 use App\Models\UpperBoard;

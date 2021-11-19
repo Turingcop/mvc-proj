@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637360187">
-  <project timestamp="1637360187">
+<coverage generated="1637360622">
+  <project timestamp="1637360622">
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Console/Kernel.php">
       <class name="App\Console\Kernel" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="6" coveredelements="4"/>

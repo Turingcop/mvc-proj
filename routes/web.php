@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{DiceController, StatController, YatzyController, SessionController, ScoreController};
+use App\Http\Controllers\{StatController, YatzyController, ScoreController};
 
 /*
 |--------------------------------------------------------------------------
