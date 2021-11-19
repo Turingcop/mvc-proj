@@ -10,31 +10,6 @@ class YatzyTest extends TestCase
 {
     public function testCreateYatzy()
     {
-        // $handHist = new class {
-        //     public function create()
-        //     {
-        //         return;
-        //     }
-        // };
-
-        // $highScore = new class {
-        //     public function highScore()
-        //     {
-        //         return;
-        //     }
-        //     public function setScore()
-        //     {
-        //         return;
-        //     }
-        // };
-
-        // $diceHist = new class {
-        //     public function increaseValCount()
-        //     {
-        //         return;
-        //     }
-        // };
-
         $yatzy = new Yatzy("App\Models\YatzyHand", "App\Models\DiceGraphic", 5, new DiceHistory(), new HandHistory(), new Score());
         $this->assertInstanceOf(Yatzy::class, $yatzy);
     }
