@@ -20,7 +20,7 @@ $arr = $arr ?? null;
 @endphp
 
 <div class="yatzy">
-<div class="width40">
+<div class="width40 flex-end">
     <h1>Yatzy {{ $round ? ": Runda " . $round : "" }}</h1>
     <form method="POST" action={{ $action }} class="dicecheck fullwidth">
     @csrf
@@ -46,7 +46,7 @@ $arr = $arr ?? null;
     </form>
 </div>
 
-<div class="fullwidth">
+<div class="width80 flex-start">
 @include('upperscore')
 @include('lowerscore')
 </div>
