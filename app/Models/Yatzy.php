@@ -114,7 +114,7 @@ class Yatzy
         }
     }
 
-    private function updateScore($data)
+    private function updateScore()
     {
         if ($this->rolls == 4) {
             $roll = $this->lastroll;
@@ -152,7 +152,7 @@ class Yatzy
         }
 
         $this->thirdRoll($data);
-        $this->updateScore($data);
+        $this->updateScore();
         $this->endGame($data);
 
         $data["checkbox"] = implode(" ", $this->playerhand->checkDice($this->disable));
