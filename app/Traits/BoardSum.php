@@ -15,10 +15,11 @@ trait BoardSum
                 $score += $val;
             }
         }
-        $board["Summa"] = $score;
         if (isset($board["Bonus"]) && $score >= 63) {
             $board["Bonus"] = 50;
+            $score += 50;
         }
+        $board["Summa"] = $score;
         return $board;
     }
 }

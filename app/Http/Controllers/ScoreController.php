@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Score;
+use App\Models\DiceHistory;
+use App\Models\HandHistory;
 
 class ScoreController extends Controller
 {
@@ -16,16 +18,7 @@ class ScoreController extends Controller
     public function desc()
     {
         $data = [];
-        $data["score"] = $this->score->sortByDesc('score')->values();
-        $data["pointhref"] = "score/pointsasc";
-        return view('score', $data);
-    }
-
-    public function asc()
-    {
-        $data = [];
-        $data["score"] = $this->score->sortBy('score')->values();
-        $data["pointhref"] = url("/score");
+        $data["score"] = $this->score->sortByDesc('score');
         return view('score', $data);
     }
 }

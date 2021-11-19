@@ -1,14 +1,11 @@
 @include('header')
-@php
-$pointhref = $pointhref;
-@endphp
 
 <div class="center">
     </table>
     <table class="scoretable">
         <tr>
             <th>Placering</th>
-            <th>>Poäng</th>
+            <th>Poäng</th>
             <th>Namn</th>
             <th>Tidpunkt</th>
         </tr>

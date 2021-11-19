@@ -12,12 +12,4 @@ class HandHistory extends Model
     protected $table = 'handhistory';
 
     protected $fillable = ['hand', 'value'];
-
-    // public function insertHand($hand, $value)
-    // {
-    //     // $current = Self::find(1)->where('handvalue', $handvalue)->value('count');
-    //     // Self::where('handvalue', $handvalue)
-    //     // ->update(['count' => $current + 1]);
-    //     Self::create(['hand' => $hand, 'value' => $value]);
-    // }
 }

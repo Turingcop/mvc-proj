@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637238926">
-  <project timestamp="1637238926">
+<coverage generated="1637287749">
+  <project timestamp="1637287749">
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Console/Kernel.php">
       <class name="App\Console\Kernel" namespace="global">
         <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
@@ -36,22 +36,26 @@
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/ScoreController.php">
       <class name="App\Http\Controllers\ScoreController" namespace="global">
-        <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="13" coveredelements="0"/>
+        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
       </class>
-      <line num="10" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="12" type="stmt" count="0"/>
-      <line num="13" type="stmt" count="0"/>
-      <line num="16" type="method" name="desc" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="18" type="stmt" count="0"/>
-      <line num="19" type="stmt" count="0"/>
+      <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <line num="15" type="stmt" count="0"/>
+      <line num="18" type="method" name="desc" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="20" type="stmt" count="0"/>
       <line num="21" type="stmt" count="0"/>
-      <line num="24" type="method" name="asc" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="26" type="stmt" count="0"/>
-      <line num="27" type="stmt" count="0"/>
-      <line num="28" type="stmt" count="0"/>
-      <line num="29" type="stmt" count="0"/>
-      <metrics loc="31" ncloc="31" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="13" coveredelements="0"/>
+      <line num="22" type="stmt" count="0"/>
+      <metrics loc="24" ncloc="24" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+    </file>
+    <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/StatController.php">
+      <class name="App\Http\Controllers\StatController" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+      </class>
+      <line num="10" type="method" name="show" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="12" type="stmt" count="0"/>
+      <line num="13" type="stmt" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/YatzyController.php">
       <class name="App\Http\Controllers\YatzyController" namespace="global">
@@ -210,11 +214,11 @@
       <class name="App\Models\HandHistory" namespace="global">
         <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </class>
-      <metrics loc="23" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <metrics loc="15" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Models/LowerBoard.php">
       <class name="App\Models\LowerBoard" namespace="global">
-        <metrics complexity="36" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="73" coveredstatements="0" elements="82" coveredelements="0"/>
+        <metrics complexity="36" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="71" coveredstatements="0" elements="80" coveredelements="0"/>
       </class>
       <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="18" type="stmt" count="0"/>
@@ -290,15 +294,13 @@
       <line num="139" type="stmt" count="0"/>
       <line num="142" type="method" name="calcScore" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="144" type="stmt" count="0"/>
-      <line num="145" type="stmt" count="0"/>
+      <line num="146" type="stmt" count="0"/>
       <line num="147" type="stmt" count="0"/>
       <line num="148" type="stmt" count="0"/>
       <line num="149" type="stmt" count="0"/>
       <line num="150" type="stmt" count="0"/>
       <line num="151" type="stmt" count="0"/>
-      <line num="152" type="stmt" count="0"/>
-      <line num="154" type="stmt" count="0"/>
-      <metrics loc="156" ncloc="156" classes="1" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="73" coveredstatements="0" elements="82" coveredelements="0"/>
+      <metrics loc="156" ncloc="154" classes="1" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="71" coveredstatements="0" elements="80" coveredelements="0"/>
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Models/Score.php">
       <class name="App\Models\Score" namespace="global">
@@ -308,7 +310,7 @@
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Models/ScoreBoard.php">
       <class name="App\Models\ScoreBoard" namespace="global">
-        <metrics complexity="5" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="15" coveredelements="0"/>
+        <metrics complexity="5" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="19" coveredelements="0"/>
       </class>
       <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="14" type="stmt" count="0"/>
@@ -323,32 +325,60 @@
       <line num="48" type="method" name="calcScore" visibility="public" complexity="2" crap="6" count="0"/>
       <line num="50" type="stmt" count="0"/>
       <line num="51" type="stmt" count="0"/>
-      <line num="52" type="stmt" count="0"/>
+      <line num="53" type="stmt" count="0"/>
       <line num="54" type="stmt" count="0"/>
-      <metrics loc="56" ncloc="56" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="15" coveredelements="0"/>
+      <line num="55" type="stmt" count="0"/>
+      <line num="56" type="stmt" count="0"/>
+      <line num="58" type="stmt" count="0"/>
+      <line num="59" type="stmt" count="0"/>
+      <metrics loc="61" ncloc="61" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="19" coveredelements="0"/>
     </file>
-    <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Models/Shame.php">
-      <class name="App\Models\Shame" namespace="global">
-        <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Models/Statistics.php">
+      <class name="App\Models\Statistics" namespace="global">
+        <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="0" elements="24" coveredelements="0"/>
       </class>
-      <metrics loc="15" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <line num="12" type="method" name="getStats" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <line num="15" type="stmt" count="0"/>
+      <line num="17" type="stmt" count="0"/>
+      <line num="18" type="stmt" count="0"/>
+      <line num="19" type="stmt" count="0"/>
+      <line num="20" type="stmt" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="22" type="stmt" count="0"/>
+      <line num="23" type="stmt" count="0"/>
+      <line num="24" type="stmt" count="0"/>
+      <line num="25" type="stmt" count="0"/>
+      <line num="26" type="stmt" count="0"/>
+      <line num="27" type="stmt" count="0"/>
+      <line num="28" type="stmt" count="0"/>
+      <line num="29" type="stmt" count="0"/>
+      <line num="30" type="stmt" count="0"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="32" type="stmt" count="0"/>
+      <line num="34" type="stmt" count="0"/>
+      <line num="35" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="0"/>
+      <line num="39" type="stmt" count="0"/>
+      <line num="41" type="stmt" count="0"/>
+      <metrics loc="43" ncloc="43" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="0" elements="24" coveredelements="0"/>
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Models/UpperBoard.php">
       <class name="App\Models\UpperBoard" namespace="global">
-        <metrics complexity="4" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="11" coveredelements="0"/>
+        <metrics complexity="4" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
       </class>
-      <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="18" type="stmt" count="0"/>
-      <line num="29" type="stmt" count="0"/>
-      <line num="39" type="method" name="calcScore" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="41" type="stmt" count="0"/>
-      <line num="42" type="stmt" count="0"/>
-      <line num="43" type="stmt" count="0"/>
-      <line num="44" type="stmt" count="0"/>
-      <line num="45" type="stmt" count="0"/>
-      <line num="48" type="stmt" count="0"/>
-      <line num="49" type="stmt" count="0"/>
-      <metrics loc="51" ncloc="51" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="11" coveredelements="0"/>
+      <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="18" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="37" type="stmt" count="1"/>
+      <line num="39" type="method" name="calcScore" visibility="public" complexity="3" crap="3" count="1"/>
+      <line num="42" type="stmt" count="1"/>
+      <line num="43" type="stmt" count="1"/>
+      <line num="44" type="stmt" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <line num="48" type="stmt" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <metrics loc="52" ncloc="50" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Models/User.php">
       <class name="App\Models\User" namespace="global">
@@ -509,18 +539,19 @@
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Traits/BoardSum.php">
       <class name="App\Traits\BoardSum" namespace="global">
-        <metrics complexity="6" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="9" coveredelements="0"/>
+        <metrics complexity="6" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
       </class>
-      <line num="10" type="method" name="boardSum" visibility="public" complexity="6" crap="42" count="0"/>
-      <line num="12" type="stmt" count="0"/>
-      <line num="13" type="stmt" count="0"/>
-      <line num="14" type="stmt" count="0"/>
-      <line num="15" type="stmt" count="0"/>
-      <line num="18" type="stmt" count="0"/>
-      <line num="19" type="stmt" count="0"/>
-      <line num="20" type="stmt" count="0"/>
-      <line num="22" type="stmt" count="0"/>
-      <metrics loc="24" ncloc="24" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="9" coveredelements="0"/>
+      <line num="10" type="method" name="boardSum" visibility="public" complexity="6" crap="6" count="1"/>
+      <line num="12" type="stmt" count="1"/>
+      <line num="13" type="stmt" count="1"/>
+      <line num="14" type="stmt" count="1"/>
+      <line num="15" type="stmt" count="1"/>
+      <line num="18" type="stmt" count="1"/>
+      <line num="19" type="stmt" count="1"/>
+      <line num="20" type="stmt" count="1"/>
+      <line num="22" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <metrics loc="25" ncloc="25" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Traits/YatzyCheat.php">
       <class name="App\Traits\YatzyCheat" namespace="global">
@@ -530,6 +561,6 @@
       <line num="12" type="stmt" count="0"/>
       <metrics loc="23" ncloc="23" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
     </file>
-    <metrics files="36" loc="1359" ncloc="1173" classes="23" methods="57" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="256" coveredstatements="0" elements="313" coveredelements="0"/>
+    <metrics files="37" loc="1395" ncloc="1212" classes="25" methods="58" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="280" coveredstatements="18" elements="338" coveredelements="21"/>
   </project>
 </coverage>

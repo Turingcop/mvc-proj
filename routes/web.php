@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{DiceController, YatzyController, SessionController, ScoreController};
+use App\Http\Controllers\{DiceController, StatController, YatzyController, SessionController, ScoreController};
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +14,7 @@ use App\Http\Controllers\{DiceController, YatzyController, SessionController, Sc
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [StatController::class, 'show']);
 
 Route::get('/test', [DiceController::class, 'show']);
 Route::post('/test', [DiceController::class, 'show']);

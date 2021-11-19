@@ -47,10 +47,15 @@ class ScoreBoard extends Model
 
     public function calcScore($roll, $hand)
     {
+        $handHist = new HandHistory();
+        $score = 0;
+
         if (in_array($hand, array_keys($this->lowerBoard->board))) {
-            $this->lowerBoard->calcScore($roll, $hand);
+            $score = $this->lowerBoard->calcScore($roll, $hand);
+            $handHist->create(['hand' => $hand, 'value' => $this->lowerBoard->board[$hand]]);
             return;
         }
-        $this->upperBoard->calcScore($roll, $hand);
+        $score = $this->upperBoard->calcScore($roll, $hand);
+        $handHist->create(['hand' => $hand, 'value' => $this->upperBoard->board[$hand]]);
     }
 }

@@ -36,9 +36,9 @@ class UpperBoard extends Model
         ];
     }
 
-    public function calcScore($roll, $hand)
+    public function calcScore($roll, $hand, $test = null)
     {
-        $handHistory = new HandHistory();
+        // $handHistory = new HandHistory();
         $score = 0;
         foreach ($roll as $die) {
             if ($die == $this->hands[$hand]) {
@@ -46,6 +46,7 @@ class UpperBoard extends Model
             }
         }
         $this->board[$hand] = $score;
-        $handHistory->create(['hand' => $hand, 'value' => $score]);
+
+        // $handHistory->create(['hand' => $hand, 'value' => $score]);
     }
 }

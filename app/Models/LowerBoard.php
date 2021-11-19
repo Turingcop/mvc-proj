@@ -132,25 +132,22 @@ class LowerBoard extends Model
 
     private function calcYatzy($dupes, $hand)
     {
-        if (! $hand == "Yatzy") {
+        if ($hand != "Yatzy") {
             return;
         }
         $score = count($dupes) == 1 ? 50 : 0;
         $this->board["Yatzy"] == $score;
     }
 
-    public function calcScore($roll, $hand)
+    public function calcScore($roll, $hand, $test = null)
     {
         $dupes = $this->countDuplicates($roll);
-        $handHistory = new HandHistory();
-
+        
         $this->scoreDuplicates($dupes, $hand);
         $this->doublePairs($dupes, $hand);
         $this->calcYatzy($dupes, $hand);
         $this->fullHouse($dupes, $hand);
         $this->calcStraight($roll, $hand);
         $this->calcChance($roll, $hand);
-
-        $handHistory->create(['hand' => $hand, 'value' => $this->board[$hand]]);
     }
 }

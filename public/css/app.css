@@ -14,6 +14,13 @@ h1 {
   margin-bottom: 2.8rem;
 }
 
+h2 {
+  font: 700 1.6rem "Noto Sans JP";
+  color: #0277BD;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
 .mleft20prc {
   margin-left: 20%;
 }
@@ -171,7 +178,8 @@ table th {
 }
 
 table {
-  width: 100%;
+  width: 80%;
+  margin-bottom: 2.8rem;
 }
 
 .books td {
@@ -206,4 +214,31 @@ p {
   background-color: transparent;
   border: none;
   font-family: unset;
+}
+
+.chart-canvas {
+  display: flex;
+  height: 50% !important;
+  width: 50% !important;
+  margin: 0 auto;
+  margin-bottom: 2.8rem;
+  /* justify-self: center; */
+}
+
+.round {
+  height: 30% !important;
+  width: 30% !important;
+}
+
+.chartcontainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: calc(2fr / 3) calc(1fr / 3);
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.chartdiv {
+  width: 100%;
 }
