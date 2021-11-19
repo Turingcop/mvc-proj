@@ -37,6 +37,16 @@ class LowerBoardTest extends TestCase
         $this->assertEquals(4, $lower->board["Par"]);
         $this->assertEquals(6, $lower->board["Tretal"]);
         $this->assertEquals(8, $lower->board["Fyrtal"]);
+
+        $roll = [2, 2, 3, 3, 5];
+
+        $lower->calcScore($roll, "Par");
+        $this->assertEquals(6, $lower->board["Par"]);
+        
+        $roll = [3, 3, 2, 2, 5];
+
+        $lower->calcScore($roll, "Par");
+        $this->assertEquals(6, $lower->board["Par"]);
     }
 
     public function testFullHouse()

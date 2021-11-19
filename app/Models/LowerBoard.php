@@ -67,6 +67,7 @@ class LowerBoard extends Model
         }
 
         $score = 0;
+        ksort($dupes);
         foreach ($dupes as $key => $val) {
             if ($val >= $num) {
                 $score = $key * $num;
@@ -101,11 +102,8 @@ class LowerBoard extends Model
             return;
         }
 
-        $pair = 0;
         foreach ($dupes as $die => $count) {
-            if ($count >= 2 && $die > $pair) {
-                $score += $die * 2;
-            }
+            $score += $die * 2;
         }
         $this->board["Tvåpar"] = $score;
     }
