@@ -14,7 +14,7 @@ class LowerBoardTest extends TestCase
      *
      * @return void
      */
-    
+
     public function testYatzy()
     {
         $lower = new LowerBoard();
@@ -29,7 +29,7 @@ class LowerBoardTest extends TestCase
     {
         $lower = new LowerBoard();
         $roll = [2, 2, 2, 2, 5];
-        
+
         $lower->calcScore($roll, "Par");
         $lower->calcScore($roll, "Tretal");
         $lower->calcScore($roll, "Fyrtal");

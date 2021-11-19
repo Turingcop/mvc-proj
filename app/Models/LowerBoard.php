@@ -148,15 +148,15 @@ class LowerBoard extends Model
                 $yatzy = false;
             }
         }
-    
-        $score = $yatzy == true ? 50 : 0;
+
+        $score = $yatzy === true ? 50 : 0;
         $this->board["Yatzy"] = $score;
     }
 
     public function calcScore($roll, $hand)
     {
         $dupes = $this->countDuplicates($roll);
-        
+
         $this->scoreDuplicates($dupes, $hand);
         $this->doublePairs($dupes, $hand);
         $this->calcYatzy($roll, $hand);

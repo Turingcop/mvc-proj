@@ -4,13 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Traits\YatzyCheat;
 
 class Yatzy
 {
     use HasFactory;
-
-    // use YatzyCheat;
 
     private $playerhand;
     private $presentationHand;
@@ -21,6 +18,8 @@ class Yatzy
     public ?string $playername = null;
     public ?string $scorekey = null;
     public array $scorekeys;
+    private object $diceHistory;
+    private object $highScore;
 
     public function __construct($dicehand, $dice, $amount, $diceHistory, $handHistory, $highScore)
     {

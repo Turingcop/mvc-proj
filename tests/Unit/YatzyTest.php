@@ -6,53 +6,105 @@ namespace App\Models;
 
 use PHPUnit\Framework\TestCase;
 
-class DiceHist
-{
-    function increaseValCount()
-    {
-        return;
-    }
-}
-
-class HandHist
-{
-    function create()
-    {
-        return;
-    }
-}
-
-class HighScore
-{
-    function highScore()
-    {
-        return;
-    }
-    
-    function setScore()
-    {
-        return;
-    }
-}
-
 class YatzyTest extends TestCase
 {
     public function testCreateYatzy()
     {
-        $yatzy = new Yatzy("App\Models\YatzyHand", "App\Models\DiceGraphic", 5, new DiceHist(), new HandHist(), new HighScore());
+        $handHist = new class {
+            public function create()
+            {
+                return;
+            }
+        };
+
+        $highScore = new class {
+            public function highScore()
+            {
+                return;
+            }
+            public function setScore()
+            {
+                return;
+            }
+        };
+
+        $diceHist = new class {
+            public function increaseValCount()
+            {
+                return;
+            }
+        };
+
+        $yatzy = new Yatzy("App\Models\YatzyHand", "App\Models\DiceGraphic", 5, $diceHist, $handHist, $highScore);
         $this->assertInstanceOf(Yatzy::class, $yatzy);
     }
 
     public function testPresentGame()
     {
-        $yatzy = new Yatzy("App\Models\YatzyHand", "App\Models\DiceGraphic", 5, new DiceHist(), new HandHist(), new HighScore());
+        $handHist = new class
+        {
+            public function create()
+            {
+                return;
+            }
+        };
+
+        $highScore = new class
+        {
+            public function highScore()
+            {
+                return;
+            }
+            public function setScore()
+            {
+                return;
+            }
+        };
+
+        $diceHist = new class
+        {
+            public function increaseValCount()
+            {
+                return;
+            }
+        };
+
+        $yatzy = new Yatzy("App\Models\YatzyHand", "App\Models\DiceGraphic", 5, $diceHist, $handHist, $highScore);
         $res = $yatzy->presentGame();
         $this->assertIsArray($res);
     }
 
     public function testPlayThrough()
     {
-        $yatzy = new Yatzy("App\Models\YatzyHand", "App\Models\DiceGraphic", 5, new DiceHist(), new HandHist(), new HighScore());
+        $handHist = new class
+        {
+            public function create()
+            {
+                return;
+            }
+        };
+
+        $highScore = new class
+        {
+            public function highScore()
+            {
+                return;
+            }
+            public function setScore()
+            {
+                return;
+            }
+        };
+
+        $diceHist = new class
+        {
+            public function increaseValCount()
+            {
+                return;
+            }
+        };
+
+        $yatzy = new Yatzy("App\Models\YatzyHand", "App\Models\DiceGraphic", 5, $diceHist, $handHist, $highScore);
         $yatzy->presentGame();
         for ($i = 0; $i < 15; $i++) {
             for ($j = 0; $j <= 3; $j++) {

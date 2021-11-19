@@ -17,7 +17,7 @@ class UpperBoardTest extends TestCase
         $upperBoard = new UpperBoard();
         $roll = [1, 1, 1, 1, 1];
         $hand = "Ettor";
-        
+
         $this->assertInstanceOf(UpperBoard::class, $upperBoard);
         $upperBoard->calcScore($roll, $hand, "test");
 

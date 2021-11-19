@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637319477">
-  <project timestamp="1637319477">
+<coverage generated="1637321296">
+  <project timestamp="1637321296">
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Console/Kernel.php">
       <class name="App\Console\Kernel" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="6" coveredelements="4"/>
@@ -29,13 +29,12 @@
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/ScoreController.php">
       <class name="App\Http\Controllers\ScoreController" namespace="global">
-        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
       </class>
       <line num="12" type="method" name="show" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="14" type="stmt" count="0"/>
       <line num="15" type="stmt" count="0"/>
-      <line num="16" type="stmt" count="0"/>
-      <metrics loc="18" ncloc="18" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+      <metrics loc="17" ncloc="17" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/StatController.php">
       <class name="App\Http\Controllers\StatController" namespace="global">
@@ -222,13 +221,13 @@
       <line num="34" type="stmt" count="7"/>
       <line num="35" type="stmt" count="7"/>
       <line num="36" type="stmt" count="7"/>
-      <line num="37" type="stmt" count="4"/>
-      <line num="38" type="stmt" count="4"/>
+      <line num="37" type="stmt" count="5"/>
+      <line num="38" type="stmt" count="5"/>
       <line num="40" type="stmt" count="7"/>
       <line num="43" type="stmt" count="7"/>
       <line num="44" type="stmt" count="7"/>
       <line num="45" type="stmt" count="7"/>
-      <line num="46" type="stmt" count="4"/>
+      <line num="46" type="stmt" count="5"/>
       <line num="49" type="stmt" count="7"/>
       <line num="52" type="method" name="scoreDuplicates" visibility="private" complexity="7" crap="7" count="7"/>
       <line num="54" type="stmt" count="7"/>
@@ -245,8 +244,8 @@
       <line num="66" type="stmt" count="6"/>
       <line num="69" type="stmt" count="2"/>
       <line num="70" type="stmt" count="2"/>
-      <line num="71" type="stmt" count="1"/>
-      <line num="72" type="stmt" count="1"/>
+      <line num="71" type="stmt" count="2"/>
+      <line num="72" type="stmt" count="2"/>
       <line num="75" type="stmt" count="2"/>
       <line num="76" type="stmt" count="2"/>
       <line num="78" type="method" name="fullHouse" visibility="private" complexity="5" crap="5" count="7"/>
@@ -331,28 +330,28 @@
       <class name="App\Models\ScoreBoard" namespace="global">
         <metrics complexity="5" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="21" coveredelements="21"/>
       </class>
-      <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="6"/>
-      <line num="14" type="stmt" count="6"/>
-      <line num="15" type="stmt" count="6"/>
+      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="6"/>
       <line num="16" type="stmt" count="6"/>
+      <line num="17" type="stmt" count="6"/>
       <line num="18" type="stmt" count="6"/>
-      <line num="35" type="stmt" count="6"/>
-      <line num="37" type="method" name="calcBothSum" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="39" type="stmt" count="1"/>
-      <line num="40" type="stmt" count="1"/>
+      <line num="20" type="stmt" count="6"/>
+      <line num="37" type="stmt" count="6"/>
+      <line num="39" type="method" name="calcBothSum" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="41" type="stmt" count="1"/>
-      <line num="43" type="method" name="sumScore" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="45" type="stmt" count="1"/>
-      <line num="46" type="stmt" count="1"/>
-      <line num="49" type="method" name="calcScore" visibility="public" complexity="2" crap="2" count="1"/>
-      <line num="51" type="stmt" count="1"/>
-      <line num="52" type="stmt" count="1"/>
+      <line num="42" type="stmt" count="1"/>
+      <line num="43" type="stmt" count="1"/>
+      <line num="45" type="method" name="sumScore" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="47" type="stmt" count="1"/>
+      <line num="48" type="stmt" count="1"/>
+      <line num="51" type="method" name="calcScore" visibility="public" complexity="2" crap="2" count="1"/>
       <line num="53" type="stmt" count="1"/>
       <line num="54" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
       <line num="56" type="stmt" count="1"/>
-      <line num="57" type="stmt" count="1"/>
       <line num="58" type="stmt" count="1"/>
-      <metrics loc="59" ncloc="59" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="21" coveredelements="21"/>
+      <line num="59" type="stmt" count="1"/>
+      <line num="60" type="stmt" count="1"/>
+      <metrics loc="61" ncloc="61" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="21" coveredelements="21"/>
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Models/Statistics.php">
       <class name="App\Models\Statistics" namespace="global">
@@ -597,6 +596,6 @@
       <line num="23" type="stmt" count="2"/>
       <metrics loc="25" ncloc="25" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
     </file>
-    <metrics files="35" loc="1371" ncloc="1189" classes="26" methods="61" coveredmethods="49" conditionals="0" coveredconditionals="0" statements="325" coveredstatements="275" elements="386" coveredelements="324"/>
+    <metrics files="35" loc="1372" ncloc="1190" classes="26" methods="61" coveredmethods="49" conditionals="0" coveredconditionals="0" statements="324" coveredstatements="275" elements="385" coveredelements="324"/>
   </project>
 </coverage>

@@ -11,8 +11,7 @@ class ScoreController extends Controller
 {
     public function show()
     {
-        $data = [];
-        $data["score"] = Score::all()->sortByDesc('score')->values();
+        $data = ["score" => Score::all()->sortByDesc('score')->values()];
         return view('score', $data);
     }
 }
