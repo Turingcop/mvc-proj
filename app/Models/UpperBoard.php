@@ -13,6 +13,7 @@ class UpperBoard extends Model implements BoardInterface
     use BoardSum;
 
     public array $board;
+    public array $hands;
 
     public function __construct()
     {

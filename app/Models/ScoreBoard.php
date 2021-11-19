@@ -13,6 +13,7 @@ class ScoreBoard extends Model implements BoardInterface
     public object $handHistory;
     public object $upperBoard;
     public object $lowerBoard;
+    public array $boardHands;
 
     public function __construct($handHistory)
     {

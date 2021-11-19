@@ -9,7 +9,7 @@ interface BoardInterface
     /**
      * @param 
      *
-     * @return array.
+     * @return array<int>.
      */
 
     public function boardSum($array);
