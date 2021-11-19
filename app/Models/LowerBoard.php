@@ -31,13 +31,20 @@ class LowerBoard extends Model
 
     private function countDuplicates($roll)
     {
-        $dupes = [];
+        $count = [];
         foreach ($roll as $die) {
-            if (isset($dupes[$die])) {
-                $dupes[$die] += 1;
+            if (isset($count[$die])) {
+                $count[$die] += 1;
                 continue;
             }
-            $dupes[$die] = 1;
+            $count[$die] = 1;
+        }
+
+        $dupes = [];
+        foreach ($count as $key => $val) {
+            if ($val >= 2) {
+                $dupes[$key] = $val;
+            }
         }
         return $dupes;
     }
@@ -97,7 +104,7 @@ class LowerBoard extends Model
         $pair = 0;
         foreach ($dupes as $die => $count) {
             if ($count >= 2 && $die > $pair) {
-                $score = $die * 2;
+                $score += $die * 2;
             }
         }
         $this->board["Tvåpar"] = $score;
@@ -136,10 +143,10 @@ class LowerBoard extends Model
             return;
         }
         $score = count($dupes) == 1 ? 50 : 0;
-        $this->board["Yatzy"] == $score;
+        $this->board["Yatzy"] = $score;
     }
 
-    public function calcScore($roll, $hand, $test = null)
+    public function calcScore($roll, $hand)
     {
         $dupes = $this->countDuplicates($roll);
         
