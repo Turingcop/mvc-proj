@@ -137,12 +137,19 @@ class LowerBoard extends Model
         $this->board["Chans"] = $score;
     }
 
-    private function calcYatzy($dupes, $hand)
+    private function calcYatzy($roll, $hand)
     {
         if ($hand != "Yatzy") {
             return;
         }
-        $score = count($dupes) == 1 ? 50 : 0;
+        $yatzy = true;
+        foreach ($roll as $die) {
+            if ($die != $roll[0]) {
+                $yatzy = false;
+            }
+        }
+    
+        $score = $yatzy == true ? 50 : 0;
         $this->board["Yatzy"] = $score;
     }
 
@@ -152,7 +159,7 @@ class LowerBoard extends Model
         
         $this->scoreDuplicates($dupes, $hand);
         $this->doublePairs($dupes, $hand);
-        $this->calcYatzy($dupes, $hand);
+        $this->calcYatzy($roll, $hand);
         $this->fullHouse($dupes, $hand);
         $this->calcStraight($roll, $hand);
         $this->calcChance($roll, $hand);

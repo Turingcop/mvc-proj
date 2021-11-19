@@ -12,4 +12,20 @@ class Score extends Model
     protected $table = 'score';
 
     protected $fillable = ['score', 'name'];
+
+    public function highScore()
+    {
+        $score = new Score();
+        $scoreSort = $score->all()->sortByDesc('score')->values();
+        return $scoreSort;
+    }
+
+    public function setScore($playerscore, $name)
+    {
+        $score = new Score();
+        $score->create([
+            'score' => $playerscore,
+            'name' => $name,
+        ]);
+    }
 }

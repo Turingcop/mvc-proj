@@ -22,13 +22,12 @@ class Yatzy
     public ?string $scorekey = null;
     public array $scorekeys;
 
-    public function __construct($dicehand, $dice, $amount, $diceHistory, $handHistory, $highScore)
+    public function __construct($dicehand, $dice, $amount, $highScore)
     {
-        $this->scoreboard = new ScoreBoard($handHistory);
+        $this->scoreboard = new ScoreBoard();
         $this->playerhand = new $dicehand($dice, $amount);
         $this->boardValues = $this->scoreboard->boardHands;
         $this->highScore = $highScore;
-        $this->diceHistory = $diceHistory;
     }
 
     private function updateScorekeys($hand)
@@ -73,12 +72,21 @@ class Yatzy
     private function highScore()
     {
         $data = [];
-        $scoreSort = $this->highScore->highScore();
+        $score = new Score();
+        $scoreSort = $score->all()->sortByDesc('score')->values();
         $tenth = $scoreSort[9]->score ?? 0;
         if ($this->scoreboard->sumScore() > $tenth) {
             $data['flash'] = "Grattis, din poäng placerar dig bland de tio bästa!";
-            $this->highScore->setScore($this->scoreboard->sumScore(), $this->playername);
+            $score->create([
+                'score' => $this->scoreboard->sumScore(),
+                'name' => $this->playername,
+            ]);
         }
+
+        if ($score->all()->offsetExists(10)) {
+            $score->all()->sortByDesc('score')->last()->delete();
+        }
+
         return $data;
     }
 
@@ -104,8 +112,9 @@ class Yatzy
         $this->playerhand->roll();
 
         $lastRoll = $this->playerhand->getLastRoll()[0];
+        $diceHistory = new DiceHistory();
         foreach ($lastRoll as $die) {
-            $this->diceHistory->increaseValCount($die);
+            $diceHistory->increaseValCount($die);
         }
 
         if ($this->rolls == 3) {

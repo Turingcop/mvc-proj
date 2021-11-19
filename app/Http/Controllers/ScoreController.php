@@ -9,16 +9,10 @@ use App\Models\HandHistory;
 
 class ScoreController extends Controller
 {
-    public function __construct()
-    {
-        $score = new Score();
-        $this->score = $score->all();
-    }
-
-    public function desc()
+    public function show()
     {
         $data = [];
-        $data["score"] = $this->score->sortByDesc('score');
+        $data["score"] = Score::all()->sortByDesc('score')->values();
         return view('score', $data);
     }
 }

@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Yatzy;
+use App\Models\DiceHistory;
+use App\Models\HandHistory;
+use App\Models\Score;
 
 class YatzyController extends Controller
 {
     public function start()
     {
-        $game = new Yatzy("App\Models\YatzyHand", "App\Models\DiceGraphic", 5);
+        // $diceHistory = new DiceHistory();
+        $game = new Yatzy("App\Models\YatzyHand", "App\Models\DiceGraphic", 5, new DiceHistory(), new HandHistory(), new Score());
         session(['game' => $game]);
         $data = $game->presentGame();
         $data['action'] = url($data['action']);

@@ -36,7 +36,7 @@ class UpperBoard extends Model
         ];
     }
 
-    public function calcScore($roll, $hand, $test = null)
+    public function calcScore($roll, $hand)
     {
         // $handHistory = new HandHistory();
         $score = 0;

@@ -9,10 +9,11 @@ class ScoreBoard extends Model
 {
     use HasFactory;
 
-    public function __construct()
+    public function __construct($handHistory)
     {
         $this->upperBoard = new UpperBoard();
         $this->lowerBoard = new LowerBoard();
+        $this->handHistory = $handHistory;
 
         $this->boardHands = [
             "Ettor",
@@ -47,15 +48,12 @@ class ScoreBoard extends Model
 
     public function calcScore($roll, $hand)
     {
-        $handHist = new HandHistory();
-        $score = 0;
-
         if (in_array($hand, array_keys($this->lowerBoard->board))) {
-            $score = $this->lowerBoard->calcScore($roll, $hand);
-            $handHist->create(['hand' => $hand, 'value' => $this->lowerBoard->board[$hand]]);
+            $this->lowerBoard->calcScore($roll, $hand);
+            $this->handHistory->create(['hand' => $hand, 'value' => $this->lowerBoard->board[$hand]]);
             return;
         }
-        $score = $this->upperBoard->calcScore($roll, $hand);
-        $handHist->create(['hand' => $hand, 'value' => $this->upperBoard->board[$hand]]);
+        $this->upperBoard->calcScore($roll, $hand);
+        $this->handHistory->create(['hand' => $hand, 'value' => $this->upperBoard->board[$hand]]);
     }
 }

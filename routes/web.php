@@ -26,5 +26,4 @@ Route::prefix('yatzy')->group(function () {
     Route::post('/restart', [YatzyController::class, 'reset']);
 });
 
-Route::get('/score', [ScoreController::class, 'desc']);
-Route::get('/score/pointsasc', [ScoreController::class, 'asc']);
+Route::get('/score', [ScoreController::class, 'show']);
