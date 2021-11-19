@@ -25,4 +25,6 @@ För att koden ska fungera som tänkt krävs vid kloning av repot att en lokal .
 
 ### Statistik
 
-Statistiken som visas upp på index-sidan uppdateras dynamiskt och hämtar sin data från den databas som anges i .env och som applikationen jobbar mot. Diagrammen kommer därför vara tomma inledningsvis, men fyllas på allteftersom applikationen används. Den ena grafen visar utfallen för samtliga tärningar som kastats, hur många som varit ettor, hur många som varit tvåor etcetera. Den andra visar snittvärdet på de tärningshänder som användare valt att föra in under de olika rubrikerna i protokollet. 
+Statistiken som visas upp på index-sidan uppdateras dynamiskt och hämtar sin data från den databas som anges i .env och som applikationen jobbar mot. Diagrammen kommer därför vara tomma inledningsvis, men fyllas på allteftersom applikationen används. Den ena grafen visar utfallen för samtliga tärningar som kastats, hur många som varit ettor, hur många som varit tvåor etcetera. Den andra visar snittvärdet på de tärningshänder som användare valt att föra in under de olika rubrikerna i protokollet.
+
+![Tärningskast utfall](/public/img/dicestats.png)
