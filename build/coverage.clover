@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637329640">
-  <project timestamp="1637329640">
+<coverage generated="1637329762">
+  <project timestamp="1637329762">
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Console/Kernel.php">
       <class name="App\Console\Kernel" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="6" coveredelements="4"/>
@@ -14,12 +14,12 @@
       <metrics loc="41" ncloc="25" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="6" coveredelements="4"/>
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Contracts/BoardInterface.php">
-      <line num="24" type="stmt" count="1"/>
-      <metrics loc="23" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <line num="12" type="stmt" count="1"/>
+      <metrics loc="11" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Contracts/DiceHandRollInterface.php">
-      <line num="24" type="stmt" count="1"/>
-      <metrics loc="23" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <line num="12" type="stmt" count="1"/>
+      <metrics loc="11" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Contracts/DiceRollInterface.php">
       <line num="16" type="stmt" count="1"/>
@@ -623,6 +623,6 @@
       <line num="23" type="stmt" count="2"/>
       <metrics loc="25" ncloc="25" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
     </file>
-    <metrics files="38" loc="1463" ncloc="1260" classes="26" methods="66" coveredmethods="54" conditionals="0" coveredconditionals="0" statements="334" coveredstatements="285" elements="400" coveredelements="339"/>
+    <metrics files="38" loc="1439" ncloc="1256" classes="26" methods="66" coveredmethods="54" conditionals="0" coveredconditionals="0" statements="334" coveredstatements="285" elements="400" coveredelements="339"/>
   </project>
 </coverage>
