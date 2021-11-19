@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\BoardSum;
+use App\Interface\BoardInterface;
 
-class LowerBoard extends Model
+class LowerBoard extends Model implements BoardInterface
 {
     use HasFactory;
     use BoardSum;
@@ -151,7 +152,7 @@ class LowerBoard extends Model
         $this->board["Yatzy"] = $score;
     }
 
-    public function calcScore($roll, $hand)
+    public function calcScore($roll, $hand): void
     {
         $dupes = $this->countDuplicates($roll);
 

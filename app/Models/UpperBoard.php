@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\BoardSum;
+use App\Interface\BoardInterface;
 
-class UpperBoard extends Model
+class UpperBoard extends Model implements BoardInterface
 {
     use HasFactory;
     use BoardSum;
@@ -36,9 +37,8 @@ class UpperBoard extends Model
         ];
     }
 
-    public function calcScore($roll, $hand)
+    public function calcScore($roll, $hand): void
     {
-        // $handHistory = new HandHistory();
         $score = 0;
         foreach ($roll as $die) {
             if ($die == $this->hands[$hand]) {
@@ -46,7 +46,5 @@ class UpperBoard extends Model
             }
         }
         $this->board[$hand] = $score;
-
-        // $handHistory->create(['hand' => $hand, 'value' => $score]);
     }
 }

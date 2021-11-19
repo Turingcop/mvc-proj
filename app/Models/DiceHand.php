@@ -4,8 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Interface\DiceHandRollInterface;
 
-class DiceHand extends Model
+class DiceHand extends Model implements DiceHandRollInterface
 {
     use HasFactory;
 
@@ -21,7 +22,7 @@ class DiceHand extends Model
         $this->sum = 0;
     }
 
-    public function roll()
+    public function roll(): array
     {
         $len = count($this->diceArr);
         for ($i = 0; $i < $len; $i++) {
@@ -30,7 +31,7 @@ class DiceHand extends Model
         return $this->diceArr;
     }
 
-    public function getLastRoll()
+    public function getLastRoll(): array
     {
         $len = count($this->diceArr);
         $res = [];

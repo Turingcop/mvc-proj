@@ -4,8 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Interface\BoardInterface;
 
-class ScoreBoard extends Model
+class ScoreBoard extends Model implements BoardInterface
 {
     use HasFactory;
 
@@ -44,13 +45,13 @@ class ScoreBoard extends Model
         $this->lowerBoard->board = $this->lowerBoard->boardSum($this->lowerBoard->board);
     }
 
-    public function sumScore()
+    public function boardSum($boards)
     {
-        $score = $this->upperBoard->board["Summa"] + $this->lowerBoard->board["Summa"];
+        $score = $boards[0]->board["Summa"] + $boards[1]->board["Summa"];
         return $score;
     }
 
-    public function calcScore($roll, $hand)
+    public function calcScore($roll, $hand): void
     {
         if (in_array($hand, array_keys($this->lowerBoard->board))) {
             $this->lowerBoard->calcScore($roll, $hand);

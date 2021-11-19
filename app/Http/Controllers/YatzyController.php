@@ -12,7 +12,6 @@ class YatzyController extends Controller
 {
     public function start()
     {
-        // $diceHistory = new DiceHistory();
         $game = new Yatzy("App\Models\YatzyHand", "App\Models\DiceGraphic", 5, new DiceHistory(), new HandHistory(), new Score());
         session(['game' => $game]);
         $data = $game->presentGame();

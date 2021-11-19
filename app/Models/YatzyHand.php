@@ -11,7 +11,7 @@ class YatzyHand extends DiceHand
 
     private $saveDice = [];
 
-    public function roll()
+    public function roll(): array
     {
         $len = count($this->diceArr);
         for ($i = 0; $i < $len; $i++) {

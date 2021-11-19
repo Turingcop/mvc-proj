@@ -75,9 +75,10 @@ class Yatzy
         $data = [];
         $scoreSort = $this->highScore->highScore();
         $tenth = $scoreSort[9]->score ?? 0;
-        if ($this->scoreboard->sumScore() > $tenth) {
+        $totalscore = $this->scoreboard->boardSum([$this->scoreboard->upperBoard, $this->scoreboard->lowerBoard]);
+        if ($totalscore > $tenth) {
             $data['flash'] = "Grattis, din poäng placerar dig bland de tio bästa!";
-            $this->highScore->setScore($this->scoreboard->sumScore(), $this->playername);
+            $this->highScore->setScore($totalscore, $this->playername);
         }
         return $data;
     }
