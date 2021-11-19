@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637360622">
-  <project timestamp="1637360622">
+<coverage generated="1637362351">
+  <project timestamp="1637362351">
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Console/Kernel.php">
       <class name="App\Console\Kernel" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="6" coveredelements="4"/>
@@ -364,7 +364,7 @@
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Models/Statistics.php">
       <class name="App\Models\Statistics" namespace="global">
-        <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="24" coveredelements="24"/>
+        <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="25" coveredelements="25"/>
       </class>
       <line num="15" type="method" name="getStats" visibility="public" complexity="2" crap="2" count="2"/>
       <line num="17" type="stmt" count="2"/>
@@ -385,12 +385,13 @@
       <line num="33" type="stmt" count="2"/>
       <line num="34" type="stmt" count="2"/>
       <line num="35" type="stmt" count="2"/>
-      <line num="37" type="stmt" count="2"/>
+      <line num="36" type="stmt" count="2"/>
       <line num="38" type="stmt" count="2"/>
       <line num="39" type="stmt" count="2"/>
-      <line num="42" type="stmt" count="2"/>
-      <line num="44" type="stmt" count="2"/>
-      <metrics loc="46" ncloc="46" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="24" coveredelements="24"/>
+      <line num="40" type="stmt" count="2"/>
+      <line num="43" type="stmt" count="2"/>
+      <line num="45" type="stmt" count="2"/>
+      <metrics loc="47" ncloc="47" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="25" coveredelements="25"/>
     </file>
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Models/UpperBoard.php">
       <class name="App\Models\UpperBoard" namespace="global">
@@ -621,6 +622,6 @@
       <line num="23" type="stmt" count="2"/>
       <metrics loc="25" ncloc="25" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
     </file>
-    <metrics files="38" loc="1453" ncloc="1265" classes="26" methods="66" coveredmethods="59" conditionals="0" coveredconditionals="0" statements="335" coveredstatements="322" elements="401" coveredelements="381"/>
+    <metrics files="38" loc="1454" ncloc="1266" classes="26" methods="66" coveredmethods="59" conditionals="0" coveredconditionals="0" statements="336" coveredstatements="323" elements="402" coveredelements="382"/>
   </project>
 </coverage>

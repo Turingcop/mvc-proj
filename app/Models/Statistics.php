@@ -32,6 +32,7 @@ class Statistics extends Model
         $data["hands"]["Liten stege"] = $this->handHist->where('hand', "Liten stege")->avg('value');
         $data["hands"]["Stor stege"] = $this->handHist->where('hand', "Stor stege")->avg('value');
         $data["hands"]["Chans"] = $this->handHist->where('hand', "Chans")->avg('value');
+        $data["hands"]["Yatzy"] = $this->handHist->where('hand', "Yatzy")->avg('value');
         $data["dice"] = $this->diceHist->all()->sortBy('value');
 
         $count = [];
