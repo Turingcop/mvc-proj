@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637344743">
-  <project timestamp="1637344743">
+<coverage generated="1637359421">
+  <project timestamp="1637359421">
     <file name="/home/turingcop/dbwebb-kurser/mvc/me/proj/app/Console/Kernel.php">
       <class name="App\Console\Kernel" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="6" coveredelements="4"/>
@@ -273,12 +273,12 @@
       <line num="98" type="stmt" count="7"/>
       <line num="99" type="stmt" count="6"/>
       <line num="101" type="stmt" count="2"/>
-      <line num="102" type="stmt" count="2"/>
-      <line num="103" type="stmt" count="2"/>
-      <line num="106" type="stmt" count="1"/>
-      <line num="107" type="stmt" count="1"/>
-      <line num="109" type="stmt" count="1"/>
-      <line num="110" type="stmt" count="1"/>
+      <line num="102" type="stmt" count="1"/>
+      <line num="103" type="stmt" count="1"/>
+      <line num="106" type="stmt" count="2"/>
+      <line num="107" type="stmt" count="2"/>
+      <line num="109" type="stmt" count="2"/>
+      <line num="110" type="stmt" count="2"/>
       <line num="112" type="method" name="calcStraight" visibility="private" complexity="6" crap="6" count="7"/>
       <line num="114" type="stmt" count="7"/>
       <line num="115" type="stmt" count="7"/>
