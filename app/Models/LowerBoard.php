@@ -103,7 +103,7 @@ class LowerBoard extends Model implements BoardInterface
             return;
         }
 
-        foreach ($dupes as $die => $count) {
+        foreach (array_keys($dupes) as $die) {
             $score += $die * 2;
         }
         $this->board["Tvåpar"] = $score;

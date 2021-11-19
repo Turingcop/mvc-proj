@@ -7,9 +7,7 @@ namespace App\Contracts;
 interface DiceRollInterface
 {
     /**
-     * @param 
-     *
-     * @return int
+     * @return int $roll
      */
 
     public function roll(): int;

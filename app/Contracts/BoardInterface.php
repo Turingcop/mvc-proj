@@ -7,9 +7,7 @@ namespace App\Contracts;
 interface BoardInterface
 {
     /**
-     * @param 
-     *
-     * @return array
+     * @param array $array
      */
 
     public function boardSum($array);

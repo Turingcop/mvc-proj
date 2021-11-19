@@ -7,7 +7,7 @@ namespace App\Traits;
 trait BoardSum
 {
     public array $board;
-    public function boardSum($board)
+    public function boardSum($board): array
     {
         $score = 0;
         foreach ($board as $key => $val) {

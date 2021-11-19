@@ -42,7 +42,7 @@ class LowerBoardTest extends TestCase
 
         $lower->calcScore($roll, "Par");
         $this->assertEquals(6, $lower->board["Par"]);
-        
+
         $roll = [3, 3, 2, 2, 5];
 
         $lower->calcScore($roll, "Par");

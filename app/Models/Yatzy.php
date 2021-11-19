@@ -73,15 +73,15 @@ class Yatzy
 
     private function highScore()
     {
-        $data = [];
+        $flash = null;
         $scoreSort = $this->highScore->highScore();
         $tenth = $scoreSort[9]->score ?? 0;
         $totalscore = $this->scoreboard->boardSum([$this->scoreboard->upperBoard, $this->scoreboard->lowerBoard]);
         if ($totalscore > $tenth) {
-            $data['flash'] = "Grattis, din poäng placerar dig bland de tio bästa!";
+            $flash = "Grattis, din poäng placerar dig bland de tio bästa!";
             $this->highScore->setScore($totalscore, $this->playername);
         }
-        return $data;
+        return $flash;
     }
 
     private function setData()
@@ -104,7 +104,7 @@ class Yatzy
             foreach ($_POST["dice"] as $val) {
                 $this->playerhand->saveDice(intval($val));
             };
-        } 
+        }
     }
 
     private function thirdRoll($data)
@@ -134,8 +134,8 @@ class Yatzy
             $this->disable = "disabled";
             $data["playlabel"] = "Börja om";
             $data["action"] = "/yatzy/restart";
-
-            array_merge($data, $this->highScore());
+            $data["flash"] = $this->highScore();
+            // array_merge($data, $this->highScore());
         }
     }
 

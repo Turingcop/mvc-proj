@@ -1,0 +1,15 @@
+parameters:
+    level: 5
+    paths:
+        - config
+        - app
+        #- tests
+    bootstrapFiles:
+        - .phpstan.constants.php
+    ignoreErrors:
+        - '#HandHistory::where#'
+        - '#DiceHistory::find#'
+        - '#DiceHistory::where#'
+        - '#DiceHistory::\$count#'
+        - '#Score::create#'
+        - '#Authenticate::redirectTo#'
