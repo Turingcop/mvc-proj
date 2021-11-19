@@ -9,7 +9,9 @@ class ScoreBoard extends Model
 {
     use HasFactory;
 
-    private $handHistory;
+    public object $handHistory;
+    public object $upperBoard;
+    public object $lowerBoard;
 
     public function __construct($handHistory)
     {

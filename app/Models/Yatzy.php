@@ -82,7 +82,7 @@ class Yatzy
         return $data;
     }
 
-    public function playGame()
+    private function setData()
     {
         $data = [
             "header" => "Yatzy",
@@ -92,13 +92,56 @@ class Yatzy
             "round" => $this->round,
            ];
         $data = array_merge($data, $this->setName());
-        $this->disable = null;
 
+        return $data;
+    }
+
+    private function saveDice()
+    {
         if (isset($_POST["dice"])) {
             foreach ($_POST["dice"] as $val) {
                 $this->playerhand->saveDice(intval($val));
             };
+        } 
+    }
+
+    private function thirdRoll()
+    {
+        if ($this->rolls == 3) {
+            $this->disable = "disabled";
+            $this->lastroll = $this->playerhand->getLastRoll()[0];
+            $data["playlabel"] = "Vidare";
         }
+    }
+
+    private function updateScore()
+    {
+        if ($this->rolls == 4) {
+            $roll = $this->lastroll;
+            $this->scoreboard->calcScore($roll, $_POST["scoreindex"]);
+            $this->updateScorekeys($_POST["scoreindex"]);
+            $this->rolls = 1;
+            $this->scoreboard->calcBothSum();
+            $this->round++;
+        }
+    }
+
+    private function endGame()
+    {
+        if ($this->round > 15) {
+            $this->disable = "disabled";
+            $data["playlabel"] = "Börja om";
+            $data["action"] = "/yatzy/restart";
+
+            $data = array_merge($data, $this->highScore());
+        }
+    }
+
+    public function playGame()
+    {
+        $data = $this->setData();
+        $this->disable = null;
+        $this->saveDice();
 
         $this->rolls++;
         $this->playerhand->roll();
@@ -108,28 +151,9 @@ class Yatzy
             $this->diceHistory->increaseValCount($die);
         }
 
-        if ($this->rolls == 3) {
-            $this->disable = "disabled";
-            $this->lastroll = $this->playerhand->getLastRoll()[0];
-            $data["playlabel"] = "Vidare";
-        }
-
-        if ($this->rolls == 4) {
-            $roll = $this->lastroll;
-            $this->scoreboard->calcScore($roll, $_POST["scoreindex"]);
-            $this->updateScorekeys($_POST["scoreindex"]);
-            $this->rolls = 1;
-            $this->scoreboard->calcBothSum();
-            $this->round++;
-        }
-
-        if ($this->round > 15) {
-            $this->disable = "disabled";
-            $data["playlabel"] = "Börja om";
-            $data["action"] = "/yatzy/restart";
-
-            $data = array_merge($data, $this->highScore());
-        }
+        $this->thirdRoll();
+        $this->updateScore();
+        $this->endGame();
 
         $data["checkbox"] = implode(" ", $this->playerhand->checkDice($this->disable));
         $data["scoreboardUpper"] = $this->scoreboard->upperBoard->board;

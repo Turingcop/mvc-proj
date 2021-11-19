@@ -3,7 +3,7 @@
 Chart.defaults.font.size = 16;
 const canvas = document.getElementById('diceChart');
 const ctx = canvas.getContext('2d');
-new Chart(ctx, {
+const diceChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ["Ettor", "Tvåor", "Treor", "Fyror", "Femmor", "Sexor"],
@@ -47,7 +47,7 @@ new Chart(ctx, {
 
 const handcanvas = document.getElementById('handChart');
 const ctx2 = handcanvas.getContext('2d');
-new Chart(ctx2, {
+const handChart = new Chart(ctx2, {
     type: 'doughnut',
     data: {
         labels: ["Ettor", "Tvåor", "Treor", "Fyror", "Femmor", "Sexor", "Par", "Tvåpar", "Tretal", "Fyrtal", "Kåk", "Liten stege", "Stor stege", "Chans", "Yatzy"],
