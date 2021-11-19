@@ -14,6 +14,7 @@ class Yatzy
     private array $boardValues;
     private int $round = 1;
     private int $rolls = 0;
+    private array $lastroll;
     private ?string $disable = null;
     public ?string $playername = null;
     public ?string $scorekey = null;
@@ -33,7 +34,7 @@ class Yatzy
 
     private function updateScorekeys($hand)
     {
-        $index = array_search($hand, $this->boardValues);
+        $index = (int) array_search($hand, $this->boardValues);
         array_splice($this->boardValues, $index, 1);
     }
 

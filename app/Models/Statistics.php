@@ -9,6 +9,9 @@ class Statistics extends Model
 {
     use HasFactory;
 
+    private object $diceHist;
+    private object $handHist;
+
     public function getStats()
     {
         $this->diceHist = new DiceHistory();

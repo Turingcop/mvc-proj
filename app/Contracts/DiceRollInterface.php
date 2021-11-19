@@ -9,7 +9,7 @@ interface DiceRollInterface
     /**
      * @param 
      *
-     * @return int.
+     * @return int
      */
 
     public function roll(): int;
