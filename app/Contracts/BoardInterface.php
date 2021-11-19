@@ -6,19 +6,7 @@ namespace App\Contracts;
 
 interface BoardInterface
 {
-    /**
-     * @param 
-     *
-     * @return array<int>.
-     */
-
     public function boardSum($array);
-
-    /**
-     * @param 
-     *
-     * @return void.
-     */
 
     public function calcScore($roll, $hand): void;
 }
