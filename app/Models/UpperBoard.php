@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\BoardSum;
-use App\Interface\BoardInterface;
+use App\Contracts\BoardInterface;
 
 class UpperBoard extends Model implements BoardInterface
 {

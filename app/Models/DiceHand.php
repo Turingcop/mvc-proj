@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Interface\DiceHandRollInterface;
+use App\Contracts\DiceHandRollInterface;
 
 class DiceHand extends Model implements DiceHandRollInterface
 {
