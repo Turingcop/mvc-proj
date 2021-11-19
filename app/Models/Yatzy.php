@@ -20,6 +20,7 @@ class Yatzy
     public array $scorekeys;
     private object $diceHistory;
     private object $highScore;
+    public object $scoreboard;
 
     public function __construct($dicehand, $dice, $amount, $diceHistory, $handHistory, $highScore)
     {
