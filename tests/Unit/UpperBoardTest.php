@@ -8,8 +8,6 @@ use App\Models\UpperBoard;
 class UpperBoardTest extends TestCase
 {
     /**
-     * A basic test example.
-     *
      * @return void
      */
     public function testUpperBoard()
@@ -19,7 +17,7 @@ class UpperBoardTest extends TestCase
         $hand = "Ettor";
 
         $this->assertInstanceOf(UpperBoard::class, $upperBoard);
-        $upperBoard->calcScore($roll, $hand, "test");
+        $upperBoard->calcScore($roll, $hand);
 
         $res = $upperBoard->board[$hand];
 

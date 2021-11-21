@@ -16,9 +16,6 @@ use App\Http\Controllers\{StatController, YatzyController, ScoreController};
 
 Route::get('/', [StatController::class, 'show']);
 
-Route::get('/test', [DiceController::class, 'show']);
-Route::post('/test', [DiceController::class, 'show']);
-
 Route::prefix('yatzy')->group(function () {
     Route::get('', [YatzyController::class, 'start']);
     Route::post('', [YatzyController::class, 'play']);

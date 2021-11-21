@@ -32,6 +32,9 @@ class Handler extends ExceptionHandler
      *
      * @return void
      */
+    /**
+     * @codeCoverageIgnore
+     */
     public function register()
     {
         $this->reportable(function (Throwable $e) {
