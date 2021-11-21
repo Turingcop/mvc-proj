@@ -21,7 +21,7 @@ $arr = $arr ?? null;
 
 <div class="yatzy">
 <div class="width40 flex-end">
-    <h1>Yatzy {{ $round ? ": Runda " . $round : "" }}</h1>
+    <h1>Yatzy</h1>
     <form method="POST" action={{ $action }} class="dicecheck fullwidth">
     @csrf
         <div class="dice">

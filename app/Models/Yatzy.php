@@ -113,7 +113,9 @@ class Yatzy
             $this->disable = "disabled";
             $this->lastroll = $this->playerhand->getLastRoll()[0];
             $data["playlabel"] = "Vidare";
+            $this->round++;
         }
+        return $data;
     }
 
     private function updateScore()
@@ -124,7 +126,6 @@ class Yatzy
             $this->updateScorekeys($_POST["scoreindex"]);
             $this->rolls = 1;
             $this->scoreboard->calcBothSum();
-            $this->round++;
         }
     }
 
@@ -132,11 +133,21 @@ class Yatzy
     {
         if ($this->round > 15) {
             $this->disable = "disabled";
+            $data["playlabel"] = "Avsluta";
+            $data["action"] = "/yatzy";
+            $data["flash"] = $this->highScore();
+            $this->round++;
+            return $data;
+        }
+        return $data;
+    }
+
+    private function finishGame($data) {
+        if ($this->round == 18) {
             $data["playlabel"] = "Börja om";
             $data["action"] = "/yatzy/restart";
-            $data["flash"] = $this->highScore();
-            // array_merge($data, $this->highScore());
         }
+        return $data;
     }
 
     public function playGame()
@@ -153,9 +164,10 @@ class Yatzy
             $this->diceHistory->increaseValCount($die);
         }
 
-        $this->thirdRoll($data);
+        $data = $this->thirdRoll($data);
         $this->updateScore();
-        $this->endGame($data);
+        $data = $this->endGame($data);
+        $data = $this->finishGame($data);
 
         $data["checkbox"] = implode(" ", $this->playerhand->checkDice($this->disable));
         $data["scoreboardUpper"] = $this->scoreboard->upperBoard->board;
