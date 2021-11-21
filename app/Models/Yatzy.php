@@ -135,7 +135,6 @@ class Yatzy
             $this->disable = "disabled";
             $data["playlabel"] = "Avsluta";
             $data["action"] = "/yatzy";
-            $data["flash"] = $this->highScore();
             $this->round++;
             return $data;
         }
@@ -144,6 +143,7 @@ class Yatzy
 
     private function finishGame($data) {
         if ($this->round == 18) {
+            $data["flash"] = $this->highScore();
             $data["playlabel"] = "Börja om";
             $data["action"] = "/yatzy/restart";
         }
