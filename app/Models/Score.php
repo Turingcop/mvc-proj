@@ -27,7 +27,7 @@ class Score extends Model
             'score' => $playerscore,
             'name' => $name,
         ]);
-        
+
         if ($score->all()->offsetExists(10)) {
             $score->all()->sortByDesc('score')->last()->delete();
         }

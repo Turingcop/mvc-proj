@@ -141,7 +141,8 @@ class Yatzy
         return $data;
     }
 
-    private function finishGame($data) {
+    private function finishGame($data)
+    {
         if ($this->round == 18) {
             $data["flash"] = $this->highScore();
             $data["playlabel"] = "Börja om";
